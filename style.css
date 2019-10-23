@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sky {
+  background-color: skyblue;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.grass {
+  background-color: forestgreen;
+  height: 26.8vh;
+}
+
+.road-bounds {
+  background-color: #666666;
+  height: 1.6vh;
+}
+
+.road {
+  background-color: #444444;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.line {
+  width: 100vw;
+  border-bottom: 1.4vh dashed white;
+}
+
+img {
+  height: 35%;
+  width: auto;
+  margin: 1%;
+}
+
+.mario {
+  animation: drive 6s linear infinite;
+}
+
+.luigi {
+  animation: drive 5.5s linear infinite;
+}
+
+.cloud {
+  animation: wind 10s linear infinite;
+}
+
+@keyframes drive {
+  0% {
+    transform: translateX(-25vw);
+  }
+
+  100% {
+    transform: translateX(130vw);
+  }
+}
+
+@keyframes wind {
+  0% {
+    transform: translateX(35vw);
+  }
+  100% {
+    transform: translateX(-155vw);
+  }
+}
